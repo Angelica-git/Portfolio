@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&family=Yeseva+One&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+	background-color: #E5E6E4;
+}
+
+h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 100;
+  color: #222222;
+}
+
+.heading {
+  margin-top: 25px;
+  grid-area: heading;
+  text-align: center;
+}
+
+.portfoliobutton{
+  width: 150px;
+  margin: 20px auto;
+}
+
+.section1 {
+  grid-area: section1;
+}
+
+.section2 {
+  grid-area: section2;
+}
+
+.main_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 140px 300px 300px;
+  grid-template-areas:
+    "heading"
+    "section1"
+    "section2";
+}
+
+p {
+  padding: 0px 20px;
+}
+
+br {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.twobuttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cvbutton {
+  margin-right: 10px;
+}
+
+.kontaktbutton {
+  margin-left: 10px;
+}
+
+button {
+  width: 150px;
+  height: 60px;
+  font-family: 'Hind Madurai', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #222222;
+  border: none;
+  color: #E5E6E4;
+}
+
+button:hover {
+  background-color:#8B8787;
+  transition: 0.2s;
+  color: #FFF;
+}
+
+p {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 18px;
+}
+
+.footerbackground  {
+  width: 100vw;
+  opacity: 0.7;
+}
+
+/*TABLETS*/
+@media screen and (min-width: 768px) {
+  
+  .main_container{
+    display: grid;
+    grid-template-columns: 15% 70% 12%;
+    grid-template-rows: 140px 300px 300px;
+    grid-template-areas:
+      "heading heading heading"
+      ". section1 ."
+      ". section2 .";
+  }
+
+  br {
+    display: none;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+/* DESKTOPS */
+@media only screen and (min-width: 1200px) {
+
+  .heading {
+    margin-top: 30px;
+  }
+
+  .main_container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 200px 300px 300px;
+    grid-template-areas:
+      "heading heading heading"
+      ". section1 ."
+      ". section2 .";
+  }
+}
+

@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #E5E6E4;
+}
+
+.heading {
+	text-align: center;
+	margin-top: 25px;
+}
+
+h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 100;
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.infotext {
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Hind Madurai', sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+
+.portfolio_container img {
+	width: 320px;
+	height: 320px;
+}
+
+.work1 {
+    grid-area: work1;
+    position: relative;
+}
+
+.work2 {
+    grid-area: work2;
+    position: relative;
+}
+
+.work3 {
+    grid-area: work3;
+    position: relative;
+}
+
+.work4 {
+    grid-area: work4;
+    position: relative;
+}
+
+.work5 {
+    grid-area: work5;
+    position: relative;
+}
+
+.work6 {
+    grid-area: work6;
+    position: relative;
+}
+
+.text-block {
+	position: absolute;
+	height: 60px;
+	width: 110%;
+	left: -5%;
+	bottom: 45%;
+	background-color: #000;
+	color: #FFF;
+}
+
+.portfolio_container {
+	margin-top: 5%;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 320px;
+	grid-gap: 3%;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-areas:
+		"work1"
+		"work2"
+		"work3"
+		"work4"
+		"work5"
+		"work6";
+
+}
+
+.work1 {
+	margin-top: 20px;
+}
+
+h4 {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+@media only screen and (min-width: 768px){
+	.portfolio_container {
+		margin-top: 5%;
+		justify-content: center;
+	    display: grid;
+		grid-template-columns: 320px 320px;
+		grid-gap: 10%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			"work1 work2"
+			"work3 work4"
+			"work5 work6";
+
+	}
+
+	h1 {
+		font-size: 60px;
+	}
+
+	.work1 {
+		margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+	.infotext {
+		width: 70%;
+	    font-size: 18px;
+	    margin-top: 40px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.portfolio_container {
+		margin-top: 5%;
+		justify-content: center;
+	    display: grid;
+		grid-template-columns: 320px 320px 320px;
+		grid-gap: 10%;
+		grid-template-rows: 50vh 50vh;
+		grid-template-areas:
+			"work1 work2 work3"
+			"work4 work5 work6";
+
+	}
+}
