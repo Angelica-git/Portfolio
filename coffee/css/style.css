@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	background-image: url("../img/headersmall1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	width: 100vw;
+	height: 60px;
+	text-align: center;
+	position: absolute;
+	word-spacing: 10px;
+	margin-top: 6px;
+}
+
+li {
+	display: inline;
+	font-family: 'Playfair Display', serif;
+	color: #FFF;
+	font-size: 16px;
+}
+
+li:hover {
+	font-weight: bold;
+}
+
+a {
+	color: #000;
+	text-decoration: none !important;
+}
+
+a:hover {
+	color: #3f3f3f;
+}
+
+.logo {
+	align-self: center;
+}
+
+.logo img {
+	height: 270px;
+	margin-top: 15px;
+}
+
+p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+
+h2 {
+	font-size: 20px;
+	font-family: 'Playfair Display', serif;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	line-height: 25px;
+	overflow-y:hidden;
+}
+
+.aboutsection1 {
+	grid-area: abtsection1;
+	text-align: center;
+}
+
+.aboutsection2 {
+	grid-area: abtsection2;
+	background-color: #F3F3F3;
+	padding: 10%;
+}
+
+.aboutsection3 {
+	grid-area: abtsection3;
+	background-color: #F3F3F3;
+	padding: 10%;
+}
+
+.aboutsection4 {
+	grid-area: abtsection4;
+	text-align: center;
+}
+
+.aboutsection1 img {
+	height: 270px;
+}
+
+.aboutsection4 img {
+	margin-top: 30px;
+}
+
+hr {
+	height: 4px;
+	background-color: #493A25;
+	margin-top: 0;
+}
+
+.borderease{
+  display:block;
+  -webkit-animation: line 1s linear forwards;
+}
+
+/* FIXA NÅTT HÄR SÅ ATT DEN ÅKER UT NÄR MAN KOMMER TILL DET HÄR ELEMENTET*/
+
+#borderease:hover {
+  -webkit-animation: line 1s linear forwards;
+}
+
+@keyframes line {
+  from {
+    left:10%;
+    width:10px;
+  }
+  to {
+    left:10%;
+    width:100px;
+  }
+
+}
+
+.aboutcontainer {
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 450px 300px 450px 500px;
+	grid-template-areas:
+		"abtsection2"
+		"abtsection1"
+		"abtsection3"
+		"abtsection4";
+}
+
+.contactsection {
+	padding: 10%;
+	width: 100vw;
+}
+
+legend {
+	font-size: 20px;
+	font-family: 'Playfair Display', serif;
+}
+
+label {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.form-control {
+	margin-top: -5px;
+}
+
+input[type=submit]{
+	width: 100px;
+	height: 40px;
+	background-color: #000;
+	color: #FFF;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	border: none;
+}
+
+h3 {
+	font-size: 17px;
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+footer {
+	height: 160px;
+	width: 100vw;
+	background-color: #e5e0e0;
+	text-align: center;
+	margin-top: 70px;
+}
+
+footer img {
+	height: 30px;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+
+.footernav {
+ 	margin-top: 10px;
+}
+
+footer h4 {
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: 'Playfair Display', serif;
+}
+
+/*TABLETS*/
+@media screen and (min-width: 768px) {
+
+	.logo img {
+		height: 400px;
+    }
+
+    li {
+    	font-size: 20px;
+    }
+
+    .aboutcontainer {
+		grid-template-rows: 350px 300px 370px 500px;
+    }
+
+    textarea.form-control {
+    	height: 150px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    header {
+	    background-image: url("../img/headersmall1.jpg");
+	}
+
+	.aboutcontainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 450px 500px;
+		grid-template-areas:
+			"abtsection1 abtsection2"
+			"abtsection3 abtsection4";
+    }
+
+    .aboutsection1 img {
+    	margin-top: 50px;
+    }
+
+    footer {
+    	height: 200px;
+    	margin-top: 0;
+    }
+
+    .footercontent {
+    	padding-top: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    
+    body {
+    	overflow-x: hidden;
+    }
+ 	header {
+	   background-image: url("../img/header1.jpg");
+	}
+
+	p {
+		padding-right: 70px;
+	}
+
+	.contactsection {
+    	padding: 10% 15%;
+    }
+
+    input[type=submit]:hover {
+    	background-color: #3f3f3f;
+    	transition: 0.2s;
+    }
+}
