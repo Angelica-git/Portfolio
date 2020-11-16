@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    color: #000;
+    font-family: 'Lato', ;
+    font-size: 12px;
+}
+
+h2 {
+    font-family: 'Roboto', ;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*GRID AREA---------------*/
+header {
+    grid-area: header;
+}
+
+.wrap {
+    grid-area: searchbar;
+}
+
+.nav-category {
+    grid-area: category;
+}
+
+.content {
+    grid-area: content;
+}
+
+.byredo1 {
+    grid-area: byredo1;
+}
+
+.byredo2 {
+    grid-area: byredo2;
+}
+
+.byredo3 {
+    grid-area: byredo3;
+}
+
+.byredo4 {
+    grid-area: byredo4;
+}
+
+[class*="byredo"],
+[class*="labruket"], 
+[class*="aesop"] {
+    margin: auto 10px;
+}
+
+.labruket1 {
+    grid-area: labruket1;
+}
+
+.labruket2 {
+    grid-area: labruket2;
+}
+
+.labruket3 {
+    grid-area: labruket3;
+}
+
+.labruket4 {
+    grid-area: labruket4;
+}
+
+.aesop1 {
+    grid-area: aesop1;
+}
+
+.aesop2 {
+    grid-area: aesop2;
+}
+
+.aesop3 {
+    grid-area: aesop3;
+}
+
+.aesop4 {
+    grid-area: aesop4;
+}
+
+/*LAYOUT---------------*/
+.product-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 4% auto auto auto auto auto auto;
+    grid-template-areas:
+        "searchbar searchbar"
+        "byredo1 byredo2"
+        "byredo3 byredo4"
+        "labruket1 labruket2"
+        "labruket3 labruket4"
+        "aesop1 aesop2"
+        "aesop3 aesop4";
+}
+
+/*SEARCHBAR---------------*/
+.wrap {
+    display: flex; /*fix later*/
+    background-color: #FBF8FE;
+    padding: 5px 0;
+    width: 100%;
+    height: 38px;
+    margin: 0 auto;
+}
+
+.searchbar {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.search {
+    width: 100%;
+    border: 3px solid #ccc;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #ccc;
+}
+
+.search:focus {
+    color: #929298;
+}
+
+.search_button {
+    width: 40px;
+    height: 24px;
+    border: 1px solid #00B4CC;
+    background-color: #555456;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search_button:hover {
+    background: #272727;
+}
+
+/*CATEGORY NAVBAR---------------*/
+.nav-category {
+    display: none;
+}
+
+/*PRODUCT GALLERY---------------*/
+img.product_img {
+    width: 100%;
+    height: auto;
+    transform: scale(0.7);
+    transition: transform .5s;
+}
+
+img.product_img:hover {
+    transform: scale(0.9);
+}
+
+.product_text {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.text1, .text3 {
+    font-weight: bold;
+}
+
+.text1, .text2, .text3 {
+    padding: 3px;
+}
+
+footer {
+    margin-top: 50px;
+    height: 200px;
+}
+
+/*TABLET*/
+@media screen and (min-width: 768px) {
+    /*PRODUCT GALLERY---------------*/
+    .product_text {
+        padding-right: 0;
+        padding-left: 90px;
+    }
+}
+
+/*SMALL SCREEN*/
+@media screen and (min-width: 960px) {
+/*CATEGORY NAVBAR---------------*/
+    .nav-category {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 16px;
+        align-items: center;
+        text-align: center;
+        margin-top: 5px;
+        border-bottom: 2px solid #ccc;
+        background-color: #FBF8FE;
+    }
+    
+    .nav-category a {
+        transition: transform .5s;
+    }
+    
+    .nav-category a:hover {
+        transform: scale(0.9);
+    }
+
+    .product-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 4% 4% auto auto auto;
+        grid-template-areas:
+        "searchbar searchbar searchbar searchbar"
+        "category category category category"
+        "byredo1 byredo2 byredo3 byredo4"
+        "labruket1 labruket2 labruket3 labruket4"
+        "aesop1 aesop2 aesop3 aesop4";
+    }
+
+    .product_text {
+        padding-right: 0;
+        padding-left: 30px;
+    }
+}
+
+/*LARGE SCREEN---------------*/
+@media screen and (min-width: 1200px) {
+    
+}

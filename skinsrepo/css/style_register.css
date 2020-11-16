@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', ;
+}
+
+h2 {
+    font-family: 'Roboto', ;
+    margin: 40px 0 30px 0;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    height: 200px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container * {
+    box-sizing: border-box;
+}
+
+.flex-container,
+.flex-inner {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flex-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-container li,
+.flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+label {
+    color: #000;
+    font-size: 12px;
+}
+
+input {
+    background-color: #272727;
+    color: #fff;
+}
+
+.flex-container > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-container li label,
+.flex-container li p {
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+.flex-container > li > label,
+.flex-container li p {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.flex-container > li > label + *,
+.flex-inner {
+    flex: 1 0 220px;
+}
+
+.flex-container li p {
+    margin: 0;
+}
+
+.flex-container li input:not([type='checkbox']),
+.flex-container li textarea {
+    padding: 15px;
+    border: none;
+}
+
+.flex-container input:focus, 
+.flex-container textarea:focus, 
+.flex-container select:focus {
+    outline-offset: 0 !important;
+    outline: none !important;
+}
+
+.flex-container li button {
+    margin: 20px auto;
+    padding: 15px 16px;
+    border: none;
+    background-color: #272727;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+}
+
+.flex-container li button:hover {
+    background-color: #373738;
+}
+
+.flex-inner {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;  
+}
+
+.flex-inner input[type='checkbox'] {
+    display: flex;
+    width: 100%;
+}
+
+#agreE {
+    width: 20%;
+}
+
+.flex-inner label {
+    width: 100%;
+
+}
+
+.flex-inner li {
+    width: 100px;
+}
+
+#countrY {
+    background-color: #272727;
+    color: #fff;
+}

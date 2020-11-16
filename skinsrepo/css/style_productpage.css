@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+ }
+
+ /* GRID AREA */
+
+.smallercontainer {
+	grid-area: smallcontainer;
+}
+
+.image {
+	grid-area: image;
+}
+
+.text {
+	grid-area: text;
+}
+
+.smallercontainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 400px 530px;
+	grid-template-areas: 
+		"image"
+		"text";
+
+}
+/* GRID AREA ENDS */
+
+body {
+	background-color: #FFF!important;
+}
+
+h1 {
+	font-size: 18px;
+	text-align: center;
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	padding: 5px;
+}
+
+h2.brand {
+	font-size: 16px;
+	margin-top: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+h2 {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+.text h3 {
+	font-size: 15px;
+	margin: 20px 0 5px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	text-decoration: underline;
+}
+
+.text p {
+	margin-top: 30px;
+	width: 90%;
+	font-family: 'Lato', sans-serif;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+p.description  {
+	margin-top: 10px;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+}
+
+.text {
+	padding: 0 20px 0 20px;
+}
+
+h4 {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+hr {
+	display: none;
+}
+
+.cart_text2 {
+	display: block;
+}
+
+select {
+	background-color: #272727;
+	color: #FFF;
+	border: none;
+	padding: 10px 20px;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.addtocart button{
+	background-color: #272727;
+	color: #FFF;
+	border: none;
+	width: 320px;
+	height: 50px;
+	margin-top: 20px;
+	margin-left: calc(50% - 320px / 2);
+}
+
+button:focus, select:focus {
+	outline: none;
+}
+
+.image img {
+	height: 250px;
+	width: 250px;
+	margin-left: calc(50% - 250px / 2);
+	margin-top: 30px;
+}
+
+.headingdesktop {
+	display: none;
+}
+
+footer {
+	height: 200px;
+}
+
+
+/* IPAD */
+
+@media screen and (min-width: 768px){
+
+    .smallercontainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 500px;
+		grid-template-areas: 
+			"image text";
+    }
+
+    .smallercontainer {
+    	margin-top: 20px;
+    }
+
+    p.intro  {
+    	background-color: rgba(217, 217, 217, 0.6);
+    	padding: 15px;
+    }
+
+    .addtocart button {
+    	margin-left: 0;
+    	width: 310px;
+    }
+
+}
+
+/* DESKTOP*/
+
+@media screen and (min-width: 960px){
+ 
+    .smallercontainer {
+	    display: grid;
+		width: 75%;
+		margin: 0 auto;
+		grid-template-columns:  1fr 1fr;
+		grid-template-rows: 670px;
+		grid-template-areas: 
+			"image text";
+    }
+
+    .heading {
+    	display: none;
+    }
+
+    .headingdesktop {
+	    display: block;
+	    margin-right: 60px;
+	    margin-top: 50px;
+    }
+
+    h1 {
+    	font-size: 20px;
+    }
+
+    .image img {
+    	height: 380px;
+    	width: 380px;
+    	margin-left: 40px;
+    	margin-top: 140px;
+    }
+
+    hr {
+    	display: block;
+    	margin-top: 20px;
+    	background-color: #d9d9d9;
+    	width: 530px;
+    }
+
+    .text {
+	    padding: 0;
+    }
+
+    .text p {
+    	font-size: 15px
+    }
+
+
+    select {
+		padding: 10px 20px;
+		display: inline-block;
+		margin-top: 20px;
+    }
+
+    .addtocart button{
+		width: 200px;
+		height: 50px;
+		margin-top: 10px;
+		margin-left: 0;
+    }
+
+    button:hover {
+   	    opacity: 0.6;
+   	    transition: 0.2s;
+    }
+}

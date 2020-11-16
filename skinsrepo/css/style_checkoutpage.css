@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+ }
+
+ /* GRID AREA */
+
+.top {
+	grid-area: top;
+}
+
+.img {
+	grid-area: img;
+}
+
+.container2 {
+	grid-area: container2;
+}
+
+.name {
+	grid-area: name;
+}
+
+.quantity {
+	grid-area: quantity;
+}
+
+.signin {
+	grid-area: signin;
+}
+
+.shipping {
+	grid-area: shipping;
+}
+
+.submit {
+	grid-area: submit;
+}
+
+.othersbuy {
+	grid-area: others;
+}
+
+.checkout_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 70px 250px 100px 130px 550px 250px;
+	grid-template-areas: 
+		"top top"
+		"img container2"
+		"signin signin"
+		"submit ."
+		"others others"
+		"shipping shipping";
+}
+
+.container2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 125px 125px;
+	grid-template-areas: 
+		"name"
+		"quantity";
+}
+
+/* GRID AREA ENDS */
+
+/* FLEXBOX*/
+
+.otherproducts {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: 20px;
+
+}
+
+.otherproducts img {
+	margin-bottom: 20px;
+}
+
+.othersbuy h4{
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.byr1, .byr2, .la1, .la2{
+    flex-basis: 35%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.othersbuy a {
+	text-decoration: none;
+	color: #000;
+	font-size: 13px;
+}
+
+
+/* FLEXBOX ENDS */
+
+body {
+	background-color: #FFF;
+}
+
+h1 {
+	font-size: 25px;
+	text-align: center;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+.checkout_container img {
+	height: 200px;
+	padding-top: 15px;
+}
+
+.name {
+	padding-top: 30px;
+}
+
+.name h2 {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 60px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.name h2:first-child {
+	text-decoration: underline;
+	padding-bottom: 5px;
+}
+
+.quantity {
+	padding-top: 13px;
+}
+
+.quantity p {
+	margin-top: 10px;
+	font-size: 12px;
+	word-spacing: 42px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.shipping p {
+    font-family: 'Lato', sans-serif;
+}
+
+select {
+	width: 65%;
+	background-color: #272727;
+	color: #FFF;
+	padding: 8px;
+}
+
+select:focus input:focus {
+	outline: none;
+}
+
+.signin {
+    padding-left: 15%;
+}
+
+.signin h2, label {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signin h2 {
+    font-weight: lighter;
+}
+
+.signin input {
+    background-color: #272727;
+    height: 30px;
+    width: 250px;
+    border: none;
+    margin-top: 10px;
+    color: #FFF;
+}
+
+.submit {
+	margin-left: 29%;
+}
+
+.submit input {
+	background-color: #272727;
+    height: 40px;
+    width: 150px;
+    border: none;
+    margin-top: 10px;
+    color: #FFF;
+    font-size: 11px;
+}
+
+.shipping {
+	padding: 0 10%;
+	font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.shipping h3 {
+	margin-bottom: 10px;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+.othersbuy img {
+	height: 100px;
+}
+
+footer {
+	height: 200px;
+}
+
+
+/* IPAD */
+
+@media screen and (min-width: 768px){
+    
+    .checkout_container {
+		grid-template-rows: 70px 250px 100px 150px 600px;
+		grid-template-areas: 
+			"top top"
+			"img container2"
+			"signin shipping"
+			"submit submit"
+			"others others";
+    }
+
+    img.img{
+    	margin-left: 30%;
+    }
+
+    .name h2 {
+    	font-size: 17px;
+    }
+
+    .quantity p {
+    	word-spacing: 190px;
+    }
+
+    .shipping {
+    	padding-left: 0;
+    	padding-right: 20%;
+    	margin-top: 20px;
+    }
+
+    .signin {
+    	padding-left: 20%;
+    }
+
+    .submit {
+    	margin-left: 10%;
+    }
+
+    .otherproducts {
+    	width: 80%;
+		margin-left: calc(55% - 80% / 2);
+    }
+
+    .othersbuy h4 {
+    	margin-right: 5%;
+    }
+
+}
+
+/* DESKTOP*/
+
+@media screen and (min-width: 960px){
+
+	.checkout_container {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 150px 120px 260px 300px 250px;
+		grid-template-areas: 
+			"top top top"
+			"img container2 signin"
+			"img container2 submit"
+			"others others others"
+			"shipping shipping .";
+    }
+
+    .checkout_container img {
+	    height: 250px;
+	    padding-top: 0;
+    }
+
+    h1.top {
+    	align-self: center;
+    }
+
+    .name {
+    	padding-top: 0;
+    }
+
+    select {
+    	width: 150px;
+    	margin-top: 30px;
+    }
+
+    .quantity p {
+    	word-spacing: 90px;
+    }
+
+    .signin {
+    	padding-left: 0;
+    }
+
+    .signin input {
+    	height: 35px;
+    }
+
+    .submit {
+    	margin-left: 0;
+    	margin-top: 30px;
+    }
+
+    .submit input {
+    	height: 50px;
+    	width: 250px;
+    }
+
+    .otherproducts {
+		flex-flow: nowrap;
+		margin-left: 15%;
+		justify-content: flex-start;
+
+    }
+
+    .othersbuy h4 {
+	     text-align: left;
+	     margin-left: 15%;
+	     width: 200px;
+	     margin-bottom: 30px;
+    }
+
+    .othersbuy img {
+    	height: 100px;
+    }
+
+    .othersbuy img:hover {
+        transform: scale(1.2);
+    	transition: 0.2s;
+    }
+
+    .byr1, .byr2, .la1, .la2{
+        flex-basis: 20%;
+    }
+
+    .shipping {
+    	padding: 30px 20% 30px 22%;
+    	font-size: 15px;
+    }
+
+    .icons img {
+	    height: 30px;
+    }
+
+    button:hover {
+   	    opacity: 0.6;
+   	    transition: 0.2s;
+    }
+}
+
