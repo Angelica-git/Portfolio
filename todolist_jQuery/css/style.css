@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.img1 {
+	height: 700px;
+	margin-top: 30px;
+	margin-left: 40px;
+	transform: rotate(15deg);
+	grid-area: img;
+}
+
+.container {
+    grid-area: container;
+    background-color: #8DAB6F;
+    border-right: 4px dotted #F6F6F6;
+    border-left: 4px dotted #F6F6F6;
+    background-image: url('../img/b10.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.maincontainer {
+	background-color: #F6F6F6;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 800px;
+	grid-template-areas: 
+		"img container . ";
+}
+
+h1 {
+	text-align: center;
+	padding-top: 20px;
+	color: #F6F6F6;
+	font-family: 'Merienda', cursive;
+}
+
+.addnew {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.addnew label {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+}
+
+input {
+	margin-top: 10px;
+	height: 25px;
+	width: 180px;
+	font-size: 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #F6F6F6;
+	border: none;
+}
+
+input:focus {
+    outline-offset: 0px;
+    outline: 1px solid #606060;
+}
+
+button {
+	height: 25px;
+	width: 70px;
+	font-size: 15px;
+	background-color: #000000;
+	color: #FFF;
+	border: none;
+	border-radius: 7px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+button:focus {
+	outline-offset: 0px;
+    outline: none;
+}
+
+button:hover {
+	opacity: 0.7;
+	transition: 0.2s;
+}
+
+li {
+	margin: 5px 0 5px 30px;
+}
+
+li button {
+	margin-left: 5px;
+}
+
+h2 {
+	margin-left: 30px;
+	margin-top: 50px;
+	font-family: 'Merienda', cursive;
+}
+
+
+/* La in lite mobilanpassat bara för att */
+@media screen and (max-width: 800px){
+	
+	.maincontainer {
+		background-color: #F6F6F6;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 800px;
+		grid-template-areas: 
+			"container";
+	}
+
+    input {
+    	width: 140px;
+    }
+
+    button {
+    	width: 60px;
+    }
+   
+}
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Uppgift Att göra applikation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- jQuery UI CSS-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	
+	<!-- Custom made css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="maincontainer">
+		<img src="img/b9.png" class="img1">
+		<main class="container">
+			<h1 id="title">Att göra lista:</h1>
+			<form id= "addnew" class="addnew">
+				<label for="addactivity">Fyll i din syssla:</label><br>
+			    <input type="text" id="addactivity" name="addactivity">
+			    <button id="button" type="button">Lägg till</button>
+			</form>
+			<section class= "todolist">
+					<h2>Att göra:</h2>
+					<ul id= "mylist">
+				    </ul>
+	        </section>
+	        <section class= "done">
+					<h2>Färdigt:</h2>
+					<ul id = "donelist">
+					</ul>
+	        </section>
+		</main>
+    </div>
+	<!-- jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- jQuery UI library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<!-- Custom made js-->
+    <script src="js/main.js"></script>
+
+    </body>
+</html>
