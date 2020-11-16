@@ -91,6 +91,23 @@ button:hover {
   color: #FFF;
 }
 
+.githubbutton {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.githubbutton button {
+  background-color: #E5E6E4;
+  border: 2px solid #222222;
+  color: #222222;
+}
+
+.githubbutton button:hover {
+  background-color: rgba(139, 135, 135, 0.5);
+  color: #FFF;
+  transition: 0.2s;
+}
+
 p {
   font-family: 'Hind Madurai', sans-serif;
   font-size: 18px;
